@@ -1,0 +1,27 @@
+name: "Setup"
+description: "Setup environment for dbt-select-builder"
+inputs:
+  python-version:
+    default: "3.9"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Check out the repository
+      uses: actions/checkout@v4.1.1
+
+    - name: Set up Python
+      uses: actions/setup-python@v5.1.0
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    # See https://github.com/marketplace/actions/astral-sh-setup-uv#install-the-latest-version
+    - name: Install the latest version of uv
+      uses: astral-sh/setup-uv@v6
+      with:
+        version: "latest"
+
+    - name: Install required packages
+      run: |
+        uv sync
