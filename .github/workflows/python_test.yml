@@ -38,3 +38,15 @@ jobs:
       - name: Run ruff
         run: |
           uv run ruff check src/
+
+      - name: build dbt-select-builder
+        run: |
+          uv build
+
+      - name: install built package
+        run: |
+          uv pip install echo $( find dist/ -name *.whl)
+
+      - name: test using built package
+        run: |
+          uv run pytest tests
