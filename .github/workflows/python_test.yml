@@ -29,11 +29,11 @@ jobs:
 
       - name: Run pytest
         run: |
-          uv run pytest
+          uv run pytest src/
 
       - name: Run mypy
         run: |
-          uv run mypy
+          uv run mypy src/
 
       - name: Run ruff
         run: |
