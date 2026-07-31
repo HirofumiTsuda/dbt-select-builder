@@ -1,7 +1,7 @@
 [project]
 name = "dbt-select-builder"
 version = "0.1.1"
-description = "Add your description here"
+description = "A builder for dbt select/exclude clauses, letting you compose them from AND/OR expressions instead of hand-expanding parentheses yourself."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
