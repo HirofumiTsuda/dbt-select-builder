@@ -1,10 +1,18 @@
 [project]
 name = "dbt-select-builder"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.1.1"
+description = "A builder for dbt select/exclude clauses, letting you compose them from AND/OR expressions instead of hand-expanding parentheses yourself."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "MIT"
 dependencies = []
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+]
 
 [dependency-groups]
 dev = [
