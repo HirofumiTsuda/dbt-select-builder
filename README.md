@@ -1,5 +1,10 @@
 # dbt-select-builder
 
+[![PyPI version](https://img.shields.io/pypi/v/dbt-select-builder)](https://pypi.org/project/dbt-select-builder/)
+[![Python versions](https://img.shields.io/pypi/pyversions/dbt-select-builder)](https://pypi.org/project/dbt-select-builder/)
+[![Python Tests](https://github.com/HirofumiTsuda/dbt-select-builder/actions/workflows/python_test.yml/badge.svg)](https://github.com/HirofumiTsuda/dbt-select-builder/actions/workflows/python_test.yml)
+[![License: MIT](https://img.shields.io/github/license/HirofumiTsuda/dbt-select-builder)](LICENSE)
+
 ## What is this repository?
 
 A builder to help you create a select / exclude clause for dbt.
@@ -29,7 +34,7 @@ pip install dbt-select-builder
 Using this library, the following can be written in python code in a straightforward way.
 
 ```python
-from dbt-select-builder import (
+from dbt_select_builder import (
     dbt_and,
     dbt_or
 )
@@ -46,7 +51,7 @@ dbt_and(
 Also, strings with `','` and `' '` are supported.
 
 ```python
-from dbt-select-builder import (
+from dbt_select_builder import (
     dbt_and,
     dbt_or
 )
